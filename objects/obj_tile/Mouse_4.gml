@@ -5,7 +5,8 @@ switch state {
 	break;
 	
 	case State.available:
-	//show_message("Select development plan");
+	// show_message("Select development plan");
+	// TODO: pop the select plan panel
 	instance_create_layer(x + sprite_width / 2,
 						  y + sprite_height / 2,
 						  "Instances",
