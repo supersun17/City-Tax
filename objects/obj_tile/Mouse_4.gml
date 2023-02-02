@@ -5,12 +5,14 @@ switch state {
 	break;
 	
 	case State.available:
-	// show_message("Select development plan");
-	// TODO: pop the select plan panel
-	instance_create_layer(x + sprite_width / 2,
-						  y + sprite_height / 2,
-						  "Instances",
-						  obj_plans);
+	var plansPanel = instance_create_layer(x,
+										   y, 
+										   "Panels", 
+										   obj_plans) 
+	with(plansPanel) {
+		x = x - sprite_width / 2 + other.sprite_width / 2;
+		y = y - sprite_height;
+	};
 	break;
 	
 	case State.planned:
