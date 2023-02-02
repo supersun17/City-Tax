@@ -18,6 +18,8 @@
   "ResourceOrderSettings": [
     {"name":"spr_plans","order":1,"path":"sprites/spr_plans/spr_plans.yy",},
     {"name":"obj_tile","order":2,"path":"objects/obj_tile/obj_tile.yy",},
+    {"name":"spr_plan","order":2,"path":"sprites/spr_plan/spr_plan.yy",},
+    {"name":"obj_plan","order":4,"path":"objects/obj_plan/obj_plan.yy",},
     {"name":"obj_plans","order":3,"path":"objects/obj_plans/obj_plans.yy",},
   ],
 }

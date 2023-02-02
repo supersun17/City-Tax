@@ -1,18 +1,24 @@
 /// @description Insert description here
 // You can write your code in this editor
+if instance_exists(obj_plans) {
+	instance_destroy(obj_plans);
+	return;
+}
+
 switch state {
 	case State.unavailable:
 	break;
 	
 	case State.available:
-	var plansPanel = instance_create_layer(x,
-										   y, 
-										   "Panels", 
-										   obj_plans) 
+	var plansPanelX = x - sprite_get_width(spr_plans) / 2 + sprite_width / 2;
+	var plansPanelY = y - sprite_get_height(spr_plans);
+	var plansPanel = instance_create_layer(plansPanelX,
+										   plansPanelY,
+										   "Panels",
+										   obj_plans);
 	with(plansPanel) {
-		x = x - sprite_width / 2 + other.sprite_width / 2;
-		y = y - sprite_height;
-	};
+		createPlans(other.state);
+	}
 	break;
 	
 	case State.planned:
