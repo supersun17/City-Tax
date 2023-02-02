@@ -10,6 +10,9 @@ enum State {
 	developed
 }
 
+planIndexes = [0, 2];
+state = State.available;
+
 function updateColor() {
 		switch state {
 		case State.unavailable:
@@ -34,6 +37,13 @@ function updateColor() {
 	}
 }
 
-state = State.available;
+function getPlanNames() {
+	var planNames = [];
+	for(var i = 0; i < array_length(planIndexes); i += 1) {
+		var index = planIndexes[i];
+		planNames = array_concat(planNames, [global.plans[index]]);
+	}
+	return planNames
+}
 
 updateColor();

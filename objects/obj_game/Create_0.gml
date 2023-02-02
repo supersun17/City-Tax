@@ -1,6 +1,8 @@
 global.budget = 100;
 global.income = 0;
 global.planCost = 0;
+global.plans = ["restaurant", "gold mine", "hotel", "school", "bank"];
+
 
 var centerTile = instance_create_layer(0, 0, "Instances", obj_tile);
 var tileWidth = centerTile.sprite_width;

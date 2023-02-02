@@ -17,7 +17,7 @@ switch state {
 										   "Panels",
 										   obj_plans);
 	with(plansPanel) {
-		createPlans(other.state);
+		createPlans(other.state, other.getPlanNames());
 	}
 	break;
 	
