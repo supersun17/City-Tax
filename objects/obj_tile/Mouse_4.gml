@@ -6,19 +6,17 @@ if instance_exists(obj_plans) {
 }
 
 switch state {
-	case State.unavailable:
+	case State.undiscover:
+	// Undiscover -> Available
+	var newBudget = global.budget - 10;
+	if newBudget >= 0 {
+		global.budget = newBudget;
+		state = State.available;
+	}
 	break;
 	
 	case State.available:
-	var plansPanelX = x - sprite_get_width(spr_plans) / 2 + sprite_width / 2;
-	var plansPanelY = y - sprite_get_height(spr_plans);
-	var plansPanel = instance_create_layer(plansPanelX,
-										   plansPanelY,
-										   "Panels",
-										   obj_plans);
-	with(plansPanel) {
-		createPlans(other.state, other.getPlanNames());
-	}
+	
 	break;
 	
 	case State.planned:
@@ -34,6 +32,7 @@ switch state {
 	break;
 }
 
+updateColor();
 
 
 

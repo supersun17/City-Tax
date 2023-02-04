@@ -2,7 +2,7 @@
 // You can write your code in this editor
 
 enum State {
-	unavailable,
+	undiscover,
 	available,
 	planned,
 	developing,
@@ -11,21 +11,22 @@ enum State {
 }
 
 planIndexes = [0, 2];
-state = State.available;
+state = State.undiscover;
 
 function updateColor() {
 		switch state {
-		case State.unavailable:
+		case State.undiscover:
 		break;
 	
 		case State.available:
-		image_blend = c_white;
+		sprite_index = spr_tile_available;
 		break;
 	
 		case State.planned:
 		break;
 	
 		case State.developed:
+		sprite_index = spr_tile_developed;
 		break;
 	
 		case State.developing:
@@ -33,7 +34,7 @@ function updateColor() {
 	
 		case State.upgrading:
 		break;
-	
+
 	}
 }
 

@@ -5,7 +5,7 @@ planIDs = [];
 
 function createPlans(state, planNames) {
 	switch state {
-		case State.unavailable:
+		case State.undiscover:
 		break;
 	
 		case State.available:
