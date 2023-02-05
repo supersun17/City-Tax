@@ -10,7 +10,7 @@ enum State {
 	developed
 }
 
-planIndexes = [0, 2];
+planIndexes = [0, 1];
 state = State.undiscover;
 
 function updateColor() {
@@ -23,6 +23,7 @@ function updateColor() {
 		break;
 	
 		case State.planned:
+		sprite_index = spr_tile_planned;
 		break;
 	
 		case State.developed:
@@ -34,7 +35,40 @@ function updateColor() {
 	
 		case State.upgrading:
 		break;
+	}
+}
 
+function updateGame() {
+	switch state {
+		case State.undiscover:
+		// Undiscover -> Available
+		var newBudget = global.budget - 10;
+		if newBudget >= 0 {
+			global.budget = newBudget;
+			state = State.available;
+		}
+		break;
+	
+		case State.available:
+		var panelX = x - (sprite_get_width(spr_panel) - sprite_get_width(spr_tile_available)) / 2;
+		var panelY = y - (sprite_get_height(spr_panel));
+		var panel = instance_create_layer(panelX, panelY, "Panels", obj_panel);
+		panel.createPlans(state, getPlanNames());
+		panel.sourceTile = id;
+		break;
+	
+		case State.planned:
+		global.budget -= 20;
+		break;
+	
+		case State.developed:
+		break;
+	
+		case State.developing:
+		break;
+	
+		case State.upgrading:
+		break;
 	}
 }
 

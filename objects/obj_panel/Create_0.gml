@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-planIDs = [];
+plans = [];
 
 function createPlans(state, planNames) {
 	switch state {
@@ -16,10 +16,12 @@ function createPlans(state, planNames) {
 											 "Panels", 
 											 obj_plan);
 			with(plan) {
+				panel = other.id;
 				name = planNames[i];
+				updateColor();
 				depth -= 1;
 			}
-			planIDs = array_concat(planIDs, [plan.id]);
+			plans = array_concat(plans, [plan.id]);
 		}
 		break;
 	

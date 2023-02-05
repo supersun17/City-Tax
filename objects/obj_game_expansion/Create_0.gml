@@ -1,6 +1,7 @@
 global.budget = 100;
 global.income = 0;
 global.planCost = 0;
+// TODO: use struct
 global.plans = ["restaurant", "gold mine", "hotel", "school", "bank"];
 
 
