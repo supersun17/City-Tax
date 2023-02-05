@@ -58,7 +58,10 @@ function updateGame() {
 		break;
 	
 		case State.planned:
-		global.budget -= 20;
+		var newBudget = global.budget - 20;
+		if newBudget >= 0 {
+			global.budget = newBudget;
+		}
 		break;
 	
 		case State.developed:
