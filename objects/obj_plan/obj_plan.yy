@@ -6,8 +6,8 @@
   "managed": true,
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "PlansPanel",
+    "path": "folders/Objects/PlansPanel.yy",
   },
   "parentObjectId": null,
   "persistent": false,
