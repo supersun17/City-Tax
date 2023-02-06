@@ -10,6 +10,7 @@ enum State {
 	developed
 }
 
+yield = 0;
 planIndexes = [0, 1];
 state = State.undiscover;
 
@@ -42,11 +43,8 @@ function updateGame() {
 	switch state {
 		case State.undiscover:
 		// Undiscover -> Available
-		var newBudget = global.budget - 10;
-		if newBudget >= 0 {
-			global.budget = newBudget;
-			state = State.available;
-		}
+		global.cost += 10;
+		state = State.available;
 		break;
 	
 		case State.available:
@@ -58,10 +56,7 @@ function updateGame() {
 		break;
 	
 		case State.planned:
-		var newBudget = global.budget - 20;
-		if newBudget >= 0 {
-			global.budget = newBudget;
-		}
+		global.cost += 20;
 		break;
 	
 		case State.developed:
