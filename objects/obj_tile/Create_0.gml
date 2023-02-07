@@ -67,7 +67,15 @@ function updateGame() {
 		break;
 	
 		case State.planned:
+		if hasChange {
+			global.cost -= 20;
+			state = State.available;
+			hasChange = false;
+			updateColor();
+			return;
+		}
 		global.cost += 20;
+		hasChange = true
 		break;
 	
 		case State.developed:

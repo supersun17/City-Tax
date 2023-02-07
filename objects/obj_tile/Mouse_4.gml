@@ -11,10 +11,6 @@ if instance_exists(obj_panel) {
 	return;
 }
 
-if state == State.planned {
-	return;
-}
-
 updateGame();
 updateColor();
 
