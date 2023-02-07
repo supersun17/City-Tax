@@ -13,10 +13,12 @@ enum State {
 yield = 0;
 planIndexes = [0, 1];
 state = State.undiscover;
+hasChange = false;
 
 function updateColor() {
 		switch state {
 		case State.undiscover:
+		sprite_index = spr_tile_undiscover;
 		break;
 	
 		case State.available:
@@ -45,9 +47,18 @@ function updateGame() {
 		// Undiscover -> Available
 		global.cost += 10;
 		state = State.available;
+		hasChange = true
 		break;
 	
 		case State.available:
+		if hasChange {
+			// Available -> Undiscover
+			global.cost -= 10;
+			state = State.undiscover;
+			hasChange = false;
+			updateColor();
+			return;
+		}
 		var panelX = x - (sprite_get_width(spr_panel) - sprite_get_width(spr_tile_available)) / 2;
 		var panelY = y - (sprite_get_height(spr_panel));
 		var panel = instance_create_layer(panelX, panelY, "Panels", obj_panel);

@@ -9,6 +9,10 @@ global.plans = ["restaurant", "gold mine", "hotel", "school", "bank"];
 turn = 1;
 
 function next() {
+	if global.budget < global.cost {
+		show_message("Not enough budget!!!");
+		return;
+	}
 	global.budget -= global.cost;
 	global.cost = 0;
 	global.budget += global.income;
@@ -22,6 +26,7 @@ function next() {
 			tile.yield = 5;
 		}
 		global.income += tile.yield;
+		tile.hasChange = false;
 	}
 	turn += 1;
 }
