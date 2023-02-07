@@ -44,7 +44,6 @@ function updateColor() {
 function updateGame() {
 	switch state {
 		case State.undiscover:
-		// Undiscover -> Available
 		global.cost += 10;
 		state = State.available;
 		hasChange = true
@@ -52,7 +51,7 @@ function updateGame() {
 	
 		case State.available:
 		if hasChange {
-			// Available -> Undiscover
+			// Cancel: Available -> Undiscover
 			global.cost -= 10;
 			state = State.undiscover;
 			hasChange = false;
@@ -68,6 +67,7 @@ function updateGame() {
 	
 		case State.planned:
 		if hasChange {
+			// Cancel: Planned -> Available
 			global.cost -= 20;
 			state = State.available;
 			hasChange = false;
