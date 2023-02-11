@@ -3,7 +3,6 @@
   "resourceVersion": "1.0",
   "name": "obj_plan",
   "eventList": [
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":4,"eventType":6,"isDnD":false,},
   ],
   "managed": true,
@@ -28,10 +27,7 @@
   "physicsStartAwake": true,
   "properties": [],
   "solid": false,
-  "spriteId": {
-    "name": "spr_plan",
-    "path": "sprites/spr_plan/spr_plan.yy",
-  },
+  "spriteId": null,
   "spriteMaskId": null,
   "visible": true,
 }

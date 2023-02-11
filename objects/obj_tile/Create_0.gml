@@ -10,7 +10,6 @@ enum State {
 	developed
 }
 
-developmentAge = 0;
 yield = 0;
 planIndexes = [0, 1];
 state = State.undiscover;
@@ -62,7 +61,7 @@ function updateGame() {
 		var panelX = x - (sprite_get_width(spr_panel) - sprite_get_width(spr_tile_available)) / 2;
 		var panelY = y - (sprite_get_height(spr_panel));
 		var panel = instance_create_layer(panelX, panelY, "Panels", obj_panel);
-		panel.createPlans(state, getPlanNames());
+		panel.createPlans(state, getPlanSprites());
 		panel.sourceTile = id;
 		break;
 	
@@ -90,13 +89,13 @@ function updateGame() {
 	}
 }
 
-function getPlanNames() {
-	var planNames = [];
+function getPlanSprites() {
+	var planSprites = [];
 	for(var i = 0; i < array_length(planIndexes); i += 1) {
 		var index = planIndexes[i];
-		planNames = array_concat(planNames, [global.plans[index]]);
+		planSprites = array_concat(planSprites, [global.plans[index]]);
 	}
-	return planNames
+	return planSprites
 }
 
 updateColor();

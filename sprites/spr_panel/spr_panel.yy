@@ -25,8 +25,8 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "Sprites",
-    "path": "folders/Sprites.yy",
+    "name": "PlansPanel",
+    "path": "folders/Sprites/PlansPanel.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {

@@ -4,7 +4,7 @@ global.budget = 100;
 global.cost = 0;
 global.income = 0;
 // TODO: use struct
-global.plans = ["restaurant", "gold mine", "hotel", "school", "bank"];
+global.plans = [spr_plan_condo, spr_plan_restaurant];
 
 agingFactor = 0.1;
 turn = 1;

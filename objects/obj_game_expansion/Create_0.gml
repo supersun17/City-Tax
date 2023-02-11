@@ -2,7 +2,7 @@ global.budget = 100;
 global.income = 0;
 global.planCost = 0;
 // TODO: use struct
-global.plans = ["restaurant", "gold mine", "hotel", "school", "bank"];
+global.plans = [spr_plan_condo, spr_plan_restaurant];
 
 
 var centerTile = instance_create_layer(0, 0, "Instances", obj_tile);
