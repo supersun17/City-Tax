@@ -6,7 +6,7 @@ global.income = 0;
 // TODO: use struct
 global.plans = ["restaurant", "gold mine", "hotel", "school", "bank"];
 
-agingFactor = 0.5;
+agingFactor = 0.1;
 turn = 1;
 
 function next() {

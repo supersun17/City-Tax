@@ -13,6 +13,3 @@ if instance_exists(obj_panel) {
 
 updateGame();
 updateColor();
-
-
-
