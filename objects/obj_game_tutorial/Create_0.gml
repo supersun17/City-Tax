@@ -4,7 +4,7 @@ global.budget = 100;
 global.cost = 0;
 global.income = 0;
 // TODO: use struct
-global.plans = [spr_plan_condo, spr_plan_restaurant];
+global.plans = [spr_tile_condo, spr_tile_restaurant];
 
 agingFactor = 0.1;
 turn = 1;
@@ -24,7 +24,7 @@ function next() {
 		switch tile.state {
 			case State.planned:
 				tile.state = State.developed;
-				tile.updateColor();
+				tile.sprite_index = tile.plannedSelected;
 				tile.yield = 5;
 				break;
 			case State.developed:

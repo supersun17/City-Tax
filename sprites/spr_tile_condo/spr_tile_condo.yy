@@ -1,7 +1,7 @@
 {
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
-  "name": "spr_plan_condo",
+  "name": "spr_tile_condo",
   "bbox_bottom": 59,
   "bbox_left": 0,
   "bbox_right": 59,
@@ -25,14 +25,14 @@
   "nineSlice": null,
   "origin": 0,
   "parent": {
-    "name": "PlansPanel",
-    "path": "folders/Sprites/PlansPanel.yy",
+    "name": "Plans",
+    "path": "folders/Sprites/Plans.yy",
   },
   "preMultiplyAlpha": false,
   "sequence": {
     "resourceType": "GMSequence",
     "resourceVersion": "1.4",
-    "name": "spr_plan_condo",
+    "name": "spr_tile_condo",
     "autoRecord": true,
     "backdropHeight": 768,
     "backdropImageOpacity": 0.5,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0ed529a7-0316-4ef2-8205-e186fcc3d5fd","path":"sprites/spr_plan_condo/spr_plan_condo.yy",},},},"Disabled":false,"id":"3ce376d3-d535-46ad-bdfa-b4832dfd11c6","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0ed529a7-0316-4ef2-8205-e186fcc3d5fd","path":"sprites/spr_tile_condo/spr_tile_condo.yy",},},},"Disabled":false,"id":"3ce376d3-d535-46ad-bdfa-b4832dfd11c6","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
