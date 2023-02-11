@@ -10,6 +10,7 @@ enum State {
 	developed
 }
 
+developmentAge = 0;
 yield = 0;
 planIndexes = [0, 1];
 state = State.undiscover;

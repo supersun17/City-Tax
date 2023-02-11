@@ -6,6 +6,7 @@ global.income = 0;
 // TODO: use struct
 global.plans = ["restaurant", "gold mine", "hotel", "school", "bank"];
 
+agingFactor = 0.5;
 turn = 1;
 
 function next() {
@@ -20,10 +21,17 @@ function next() {
 	// Update tiles' state and yield
 	for(var i = 0; i < instance_number(obj_tile); i += 1) {
 		var tile = instance_find(obj_tile, i);
-		if tile.state == State.planned {
-			tile.state = State.developed;
-			tile.updateColor();
-			tile.yield = 5;
+		switch tile.state {
+			case State.planned:
+				tile.state = State.developed;
+				tile.updateColor();
+				tile.yield = 5;
+				break;
+			case State.developed:
+				tile.yield = max(tile.yield - agingFactor, 1);
+				break;
+			default:
+				break;
 		}
 		global.income += tile.yield;
 		tile.hasChange = false;
