@@ -44,6 +44,7 @@
     {"id":{"name":"gel_progressbar","path":"scripts/gel_progressbar/gel_progressbar.yy",},"order":0,},
     {"id":{"name":"spr_tile_developed","path":"sprites/spr_tile_developed/spr_tile_developed.yy",},"order":0,},
     {"id":{"name":"spr_tile_condo","path":"sprites/spr_tile_condo/spr_tile_condo.yy",},"order":0,},
+    {"id":{"name":"spr_tile_demolition","path":"sprites/spr_tile_demolition/spr_tile_demolition.yy",},"order":0,},
     {"id":{"name":"obj_game_expansion","path":"objects/obj_game_expansion/obj_game_expansion.yy",},"order":0,},
     {"id":{"name":"spr_tile_restaurant","path":"sprites/spr_tile_restaurant/spr_tile_restaurant.yy",},"order":0,},
     {"id":{"name":"obj_plan","path":"objects/obj_plan/obj_plan.yy",},"order":0,},

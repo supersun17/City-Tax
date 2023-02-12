@@ -16,7 +16,7 @@ state = State.undiscover;
 hasChange = false;
 
 function updateColor() {
-		switch state {
+	switch state {
 		case State.undiscover:
 		sprite_index = spr_tile_undiscover;
 		break;
@@ -30,55 +30,7 @@ function updateColor() {
 		break;
 	
 		case State.developed:
-		sprite_index = spr_tile_developed;
-		break;
-	
-		case State.developing:
-		break;
-	
-		case State.upgrading:
-		break;
-	}
-}
-
-function updateGame() {
-	switch state {
-		case State.undiscover:
-		global.cost += 10;
-		state = State.available;
-		hasChange = true
-		break;
-	
-		case State.available:
-		if hasChange {
-			// Cancel: Available -> Undiscover
-			global.cost -= 10;
-			state = State.undiscover;
-			hasChange = false;
-			updateColor();
-			return;
-		}
-		var panelX = x - (sprite_get_width(spr_panel) - sprite_get_width(spr_tile_available)) / 2;
-		var panelY = y - (sprite_get_height(spr_panel));
-		var panel = instance_create_layer(panelX, panelY, "Panels", obj_panel);
-		panel.createPlans(state, getPlanSprites());
-		panel.sourceTile = id;
-		break;
-	
-		case State.planned:
-		if hasChange {
-			// Cancel: Planned -> Available
-			global.cost -= 20;
-			state = State.available;
-			hasChange = false;
-			updateColor();
-			return;
-		}
-		global.cost += 20;
-		hasChange = true
-		break;
-	
-		case State.developed:
+		sprite_index = planSelected;
 		break;
 	
 		case State.developing:
@@ -96,6 +48,22 @@ function getPlanSprites() {
 		planSprites = array_concat(planSprites, [global.plans[index]]);
 	}
 	return planSprites
+}
+
+function createPanel() {
+	var panelX = x - (sprite_get_width(spr_panel) - sprite_get_width(spr_tile_available)) / 2;
+	var panelY = y - (sprite_get_height(spr_panel));
+	var panel = instance_create_layer(panelX, panelY, "Panels", obj_panel);	
+	panel.sourceTile = id;
+	return panel.id;
+}
+
+function handlePlanSelection(plan) {
+	planSelected = plan;
+	global.cost += 20;
+	state = State.planned;
+	hasChange = true
+	updateColor();
 }
 
 updateColor();
