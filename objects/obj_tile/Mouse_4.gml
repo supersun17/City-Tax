@@ -11,55 +11,39 @@ if instance_exists(obj_panel) {
 	return;
 }
 
-switch state {
-	case State.undiscover:
-		if hasChange {
-			// Won't happen	
-			break;
+switch currentPlan {
+	case spr_tile_undiscover:
+		if hasChange() {
+			global.cost -= 10;
+			desiredPlan = currentPlan;
+		} else {
+			global.cost += 10;
+			desiredPlan = spr_tile_available;
 		}
-		global.cost += 10;
-		state = State.available;
-		hasChange = true
 		updateColor();
 		break;
 	
-	case State.available:
-		if hasChange {
-			// Cancel: Available -> Undiscover
-			global.cost -= 10;
-			state = State.undiscover;
-			hasChange = false;
-			updateColor();
-			break;
-		}
-		var panel = createPanel();
-		panel.createPlans(state, getPlanSprites());
-		break;
-	
-	case State.planned:
-		if hasChange {
-			// Cancel: Planned -> Available
+	case spr_tile_available:
+		if hasChange() {
 			global.cost -= 20;
-			state = State.available;
-			hasChange = false;
+			desiredPlan = currentPlan;
 			updateColor();
-			break;
+		} else {
+			var panel = createPanel();
+			panel.createPlans(state, getPlanSprites());
 		}
-		
 		break;
 		
-	case State.developed:
-		if hasChange {
-			// Cancel: Demolition -> Developed
+	case spr_tile_condo:
+	case spr_tile_restaurant:
+	case spr_tile_demolition:
+		if hasChange() {
 			global.cost -= 20;
-			hasChange = false;
+			desiredPlan = currentPlan;
 			updateColor();
-			break;	
-		}
-		if yield <= 1 {
+		} else if yield <= 1 {
 			var panel = createPanel();
 			panel.createPlans(state,[spr_tile_demolition]);
-			break;
 		}
 		break;
 	

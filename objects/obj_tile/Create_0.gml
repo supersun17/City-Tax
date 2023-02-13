@@ -5,40 +5,33 @@ enum State {
 	undiscover,
 	available,
 	planned,
-	developing,
-	upgrading,
 	developed
 }
 
 yield = 0;
 planIndexes = [0, 1];
-state = State.undiscover;
-hasChange = false;
+currentPlan = spr_tile_undiscover;
+desiredPlan = spr_tile_undiscover;
+
+function hasChange() { 
+	return currentPlan != desiredPlan;
+}
+
+function state() {
+	if hasChange() {
+		return State.planned;
+	}
+	if currentPlan == spr_tile_undiscover {
+		return State.undiscover
+	}
+	if currentPlan == spr_tile_available {
+		return State.available;
+	}
+	return State.developed;
+}
 
 function updateColor() {
-	switch state {
-		case State.undiscover:
-		sprite_index = spr_tile_undiscover;
-		break;
-	
-		case State.available:
-		sprite_index = spr_tile_available;
-		break;
-	
-		case State.planned:
-		sprite_index = spr_tile_planned;
-		break;
-	
-		case State.developed:
-		sprite_index = planSelected;
-		break;
-	
-		case State.developing:
-		break;
-	
-		case State.upgrading:
-		break;
-	}
+	sprite_index = hasChange() ? spr_tile_planned : currentPlan;
 }
 
 function getPlanSprites() {
@@ -51,7 +44,7 @@ function getPlanSprites() {
 }
 
 function createPanel() {
-	var panelX = x - (sprite_get_width(spr_panel) - sprite_get_width(spr_tile_available)) / 2;
+	var panelX = x - (sprite_get_width(spr_panel) - sprite_get_width(spr_tile_undiscover)) / 2;
 	var panelY = y - (sprite_get_height(spr_panel));
 	var panel = instance_create_layer(panelX, panelY, "Panels", obj_panel);	
 	panel.sourceTile = id;
@@ -59,11 +52,7 @@ function createPanel() {
 }
 
 function handlePlanSelection(plan) {
-	planSelected = plan;
+	desiredPlan = plan;
 	global.cost += 20;
-	state = State.planned;
-	hasChange = true
 	updateColor();
 }
-
-updateColor();
