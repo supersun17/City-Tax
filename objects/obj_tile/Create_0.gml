@@ -1,13 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-enum State {
-	undiscover,
-	available,
-	planned,
-	developed
-}
-
+#region Foundation
 yield = 0;
 planIndexes = [0, 1];
 currentPlan = spr_tile_undiscover;
@@ -38,7 +32,7 @@ function getPlanSprites() {
 	var planSprites = [];
 	for(var i = 0; i < array_length(planIndexes); i += 1) {
 		var index = planIndexes[i];
-		planSprites = array_concat(planSprites, [global.plans[index]]);
+		array_push(planSprites, global.plans[index]);
 	}
 	return planSprites
 }
@@ -56,3 +50,56 @@ function handlePlanSelection(plan) {
 	global.cost += 20;
 	updateColor();
 }
+
+
+function findAdjacentTiles() {
+	var result = [];
+	var width = sprite_width;
+	var height = sprite_height;
+	var centerX = x + 0.5 * width;
+	var centerY = y + 0.5 * height;
+	var positions = [
+		[centerX + width, centerY],
+		[centerX, centerY - height],
+		[centerX - width, centerY],
+		[centerX, centerY + height]
+	]
+	for(var i = 0; i < 4; i += 1) {
+		var xx = positions[i][0];
+		var yy = positions[i][1];
+		var inst = instance_position(xx, yy, obj_tile);
+		if inst != noone {
+			array_push(result, inst.id);
+		}
+	}
+	return result;
+}
+#endregion
+
+#region Buffs
+buffs = [];
+buffsLastFor = [];
+additionalYield = 0;
+
+function applyDemolitionBuff() {
+	array_push(buffs, global.buffs.demolition.yield);
+	array_push(buffsLastFor, global.buffs.demolition.lastFor);
+}
+
+function checkoutBuffs() {
+	var result = 0;
+	for(i = 0; i < array_length(buffs); i += 1) {
+		var buff = buffs[i];
+		var buffLastFor = buffsLastFor[i];
+		if buffLastFor > 0 {
+			result += buff;
+			buffsLastFor[i] = buffLastFor - 1;
+		} else {
+			array_delete(buffs, i, 1);
+			array_delete(buffsLastFor, i, 1);
+		}
+	}
+	additionalYield = result;
+}
+
+#endregion
