@@ -6,7 +6,7 @@ cameraY = 1000;
 cameraWidth = 600;
 cameraHeight = 600;
 
-displayScale = 1;
+displayScale = 1.5;
 
 view_enabled = true;
 view_visible[0] = true;
