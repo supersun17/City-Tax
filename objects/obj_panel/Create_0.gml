@@ -8,9 +8,9 @@ function createPlans(state, planSprites) {
 		var sprite = planSprites[i];
 		var offset = i * sprite_get_width(sprite);
 		var plan = instance_create_layer(x + offset, 
-											y, 
-											"Panels", 
-											obj_plan);
+										 y, 
+										 "Panels", 
+										 obj_plan);
 		with(plan) {
 			panel = other.id;
 			sprite_index = sprite;
