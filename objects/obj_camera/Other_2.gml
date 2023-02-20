@@ -1,7 +1,7 @@
 /// @description Insert description here
 // You can write your code in this editor
-cameraX = 633;
-cameraY = 348;
+cameraX = 1310;
+cameraY = 3293;
 
 cameraWidth = 600;
 cameraHeight = 600;

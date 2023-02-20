@@ -6,7 +6,7 @@ global.income = 0;
 global.plans = [spr_tile_condo, spr_tile_restaurant];
 
 global.buffs = {
-	demolition: { yield: 5, lastFor: 5 }
+	park: { yield: 5, lastFor: 5 }
 }
 
 enum State {
@@ -40,7 +40,7 @@ function next() {
 		} else if tile.hasChange() && array_contains(global.plans, tile.desiredPlan) {
 			tile.sprite_index = tile.desiredPlan;
 			tile.yield = 5;
-		} else if tile.hasChange() && tile.desiredPlan == spr_tile_demolition {
+		} else if tile.hasChange() && tile.desiredPlan == spr_tile_park {
 			tile.sprite_index = tile.desiredPlan;
 			tile.yield = 0;
 			var adjacentTiles = tile.findAdjacentTiles();

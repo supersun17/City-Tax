@@ -36,14 +36,14 @@ switch currentPlan {
 		
 	case spr_tile_condo:
 	case spr_tile_restaurant:
-	case spr_tile_demolition:
+	case spr_tile_park:
 		if hasChange() {
 			global.cost -= 20;
 			desiredPlan = currentPlan;
 			updateColor();
 		} else if yield <= 1 {
 			var panel = createPanel();
-			panel.createPlans(state,[spr_tile_demolition]);
+			panel.createPlans(state,[spr_tile_park]);
 		}
 		break;
 	

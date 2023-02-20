@@ -2,9 +2,9 @@
   "resourceType": "GMSprite",
   "resourceVersion": "1.0",
   "name": "spr_background",
-  "bbox_bottom": 1439,
+  "bbox_bottom": 3999,
   "bbox_left": 0,
-  "bbox_right": 1919,
+  "bbox_right": 2999,
   "bbox_top": 0,
   "bboxMode": 0,
   "collisionKind": 1,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dc0740f2-801e-486c-b7ac-30e4a783de4c",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f0d0b658-af81-46e2-ab49-81c20266da8b",},
   ],
   "gridX": 0,
   "gridY": 0,
-  "height": 1440,
+  "height": 4000,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"06700473-4057-4d57-84d7-bdc959fc2b2f","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"81cf56b0-5312-46be-ad04-522a311ba7bf","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"dc0740f2-801e-486c-b7ac-30e4a783de4c","path":"sprites/spr_background/spr_background.yy",},},},"Disabled":false,"id":"ca8a0429-4c12-4d3a-8901-124813eb8770","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f0d0b658-af81-46e2-ab49-81c20266da8b","path":"sprites/spr_background/spr_background.yy",},},},"Disabled":false,"id":"dd88a164-d25a-4628-b712-49a1e47846fd","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,
@@ -70,5 +70,5 @@
   },
   "type": 0,
   "VTile": false,
-  "width": 1920,
+  "width": 3000,
 }

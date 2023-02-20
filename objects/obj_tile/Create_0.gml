@@ -82,8 +82,8 @@ buffsLastFor = [];
 additionalYield = 0;
 
 function applyDemolitionBuff() {
-	array_push(buffs, global.buffs.demolition.yield);
-	array_push(buffsLastFor, global.buffs.demolition.lastFor);
+	array_push(buffs, global.buffs.park.yield);
+	array_push(buffsLastFor, global.buffs.park.lastFor);
 }
 
 function checkoutBuffs() {
