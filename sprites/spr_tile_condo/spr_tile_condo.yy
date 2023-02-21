@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "spr_tile_condo",
   "bbox_bottom": 61,
-  "bbox_left": 2,
+  "bbox_left": 1,
   "bbox_right": 61,
   "bbox_top": 2,
   "bboxMode": 0,
@@ -13,14 +13,14 @@
   "edgeFiltering": false,
   "For3D": false,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"35829376-bdd1-4049-87fc-f6a5b56537f2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c163e9c8-0e9b-4484-96aa-d8f156689b87",},
   ],
   "gridX": 0,
   "gridY": 0,
   "height": 64,
   "HTile": false,
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"15827192-408d-4e79-8969-c3c827290d71","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"3719695e-ffc9-44d7-825b-3af55bf1a964","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
   ],
   "nineSlice": null,
   "origin": 0,
@@ -54,7 +54,7 @@
     "timeUnits": 1,
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"35829376-bdd1-4049-87fc-f6a5b56537f2","path":"sprites/spr_tile_condo/spr_tile_condo.yy",},},},"Disabled":false,"id":"0f5fb8dc-4168-44c1-9576-85f0adc8b716","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
+            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c163e9c8-0e9b-4484-96aa-d8f156689b87","path":"sprites/spr_tile_condo/spr_tile_condo.yy",},},},"Disabled":false,"id":"5b57a60e-590e-4709-a1a8-b24f7af41823","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
           ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange": null,

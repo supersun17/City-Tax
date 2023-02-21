@@ -11,7 +11,6 @@
     {"name":"inst_678D7C62","path":"rooms/rm_tutorial/rm_tutorial.yy",},
     {"name":"inst_15B0AA42","path":"rooms/rm_tutorial/rm_tutorial.yy",},
     {"name":"inst_797B57C5","path":"rooms/rm_tutorial/rm_tutorial.yy",},
-    {"name":"inst_60586BB1","path":"rooms/rm_tutorial/rm_tutorial.yy",},
     {"name":"inst_6A249F8E","path":"rooms/rm_tutorial/rm_tutorial.yy",},
     {"name":"inst_40D46708","path":"rooms/rm_tutorial/rm_tutorial.yy",},
     {"name":"inst_603ECCD1","path":"rooms/rm_tutorial/rm_tutorial.yy",},
@@ -67,6 +66,7 @@
     {"name":"inst_E91E4B6","path":"rooms/rm_tutorial/rm_tutorial.yy",},
     {"name":"inst_4096F0F4","path":"rooms/rm_tutorial/rm_tutorial.yy",},
     {"name":"inst_542F169B","path":"rooms/rm_tutorial/rm_tutorial.yy",},
+    {"name":"inst_60586BB1","path":"rooms/rm_tutorial/rm_tutorial.yy",},
   ],
   "isDnd": false,
   "layers": [
