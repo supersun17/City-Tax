@@ -1,5 +1,7 @@
 # City-and-Tax
 
+Due to my tools set change, this project is paused.
+
 Roadmap & game mechanism:
 
 https://docs.qq.com/mind/DVVZQeGRVbmpwbWJk?&u=efe57325544240d39bcfff322549bd06
